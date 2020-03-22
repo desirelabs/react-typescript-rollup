@@ -1,0 +1,5 @@
+.prettierignore
+.gitignore
+node_modules
+.idea
+LICENSE
