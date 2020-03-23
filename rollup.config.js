@@ -4,7 +4,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
 
 export default {
-  input: "index.tsx",
+  input: "src/index.tsx",
   output: {
     dir: "dist",
     format: "cjs",
@@ -13,7 +13,8 @@ export default {
     typescript(),
     resolve(),
     babel({
-      exclude: /node_modules/, // only transpile our source code
+      exclude: /node_modules/,
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
     }),
   ],
   external: ["react", "react-dom"],
